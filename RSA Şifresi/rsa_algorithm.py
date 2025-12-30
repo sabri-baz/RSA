@@ -80,7 +80,7 @@ class BazCrypte:
         return int(binary_string, 2)
 
 
-
+# --- PROJE ÇALIŞTIRMA VE SUNUM ALANI ---
 if __name__ == "__main__":
     print("\n" + "=" * 50)
     print("      BAZCRYPTE - RSA KEY GENERATOR SYSTEM      ")
@@ -97,7 +97,8 @@ if __name__ == "__main__":
         seed1 = int(giris_a)
         seed2 = int(giris_b)
 
-        
+        # RSA için genelde 1024 veya 2048 bit gerekir.
+        # Demo amaçlı ve ekrana sığması için 16 veya 32 seçebilirsin.
         hedef_bit = 32
 
         print(f"\n[SİSTEM] Kaos motoru başlatılıyor...")
