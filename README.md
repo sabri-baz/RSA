@@ -17,6 +17,81 @@ Standart Collatz tabanlı üreteçler genellikle sadece sayının tek/çift (par
     * *Kanal B:* Sayının modülo 2 (Tek/Çift) durumunu analiz eder.
 3.  **XOR Karıştırma (Mixing):** İki farklı kanaldan gelen veriler XOR kapısından geçirilerek istatistiksel sapmalar yok edilir ve kaos artırılır.
 
+
+## Algoritmanın pseuudo code ;
+## 🧩 Algoritma Sözde Kodu (Pseudo-Code)
+
+Aşağıdaki sözde kod, **BazCrypte** algoritmasının temel çalışma mantığını ve özgün **Hibrit XOR** yapısını özetler:
+
+
+CLASS BazCrypte:
+    GİRDİ: Seed_A (Başlangıç Sayısı 1), Seed_B (Başlangıç Sayısı 2)
+
+    FONKSİYON CollatzAdımı(n):
+        EĞER n Çift İSE:
+            DÖNDÜR n / 2
+        DEĞİLSE:
+            DÖNDÜR 3 * n + 1
+
+    FONKSİYON DöngüKırıcı():
+        // Sayılar 1'e ulaşıp 4-2-1 döngüsüne girerse sistemi tazele
+        zaman = ŞU_ANKİ_MİLİSANİYE()
+        Seed_A = (zaman MOD 9973) + 7   // Asal sayı ile modülasyon
+        Seed_B = (zaman MOD 9967) + 13
+
+    FONKSİYON RastgeleBitÜret(uzunluk):
+        bit_havuzu = ""
+
+        DÖNGÜ (bit_havuzu uzunluğu < istenen_uzunluk):
+            eski_A = Seed_A
+            
+            // 1. ADIM: Yörünge İlerlemesi
+            Seed_A = CollatzAdımı(Seed_A)
+            Seed_B = CollatzAdımı(Seed_B)
+
+            // 2. ADIM: Hibrit Analiz (ÖZGÜN KATMAN)
+            // Kanal A: Trend Analizi (Artış var mı?)
+            Bit_1 = 1 EĞER (Seed_A > eski_A) DEĞİLSE 0
+            
+            // Kanal B: Parite Analizi (Çift mi?)
+            Bit_2 = 1 EĞER (Seed_B MOD 2 == 0) DEĞİLSE 0
+
+            // 3. ADIM: Kaos Karıştırma (XOR Gate)
+            Sonuç_Bit = Bit_1 XOR Bit_2
+            
+            bit_havuzu'na Sonuç_Bit ekle
+
+            // 4. ADIM: Güvenlik Kontrolü
+            EĞER (Seed_A == 1 VEYA Seed_B == 1):
+                DöngüKırıcı()
+
+        DÖNDÜR bit_havuzu
+
+## Algoritma çıktısı
+==================================================
+      BAZCRYPTE - RSA KEY GENERATOR SYSTEM      
+==================================================
+
+Lütfen RSA anahtar üretimi için başlangıç tohumlarını giriniz.
+(Farklı tohumlar, farklı şifreleme anahtarları üretir.)
+
+>> 1. Çekirdek Sayısı (Örn: 1903): 200
+>> 2. Çekirdek Sayısı (Örn: 2024): 320
+
+[SİSTEM] Kaos motoru başlatılıyor...
+[SİSTEM] 32 bitlik rastgele sayı üretiliyor...
+
+----------------------------------------
+SONUÇ RAPORU:
+1. Üretilen Binary Dizi (BitStream):
+   11101001010000111011111110111000
+----------------------------------------
+2. RSA İçin Aday Sayı (Decimal):
+   3913531320
+----------------------------------------
+[BAŞARILI] Sayı RSA algoritmasına gönderilmeye hazır.
+
+
 ## 📐 Matematiksel Arkaplan
 
 Sistem, temel olarak Collatz fonksiyonu üzerinde çalışır:
