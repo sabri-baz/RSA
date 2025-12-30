@@ -1,4 +1,4 @@
-# BazCrypte: Collatz Tabanlı Kriptografik RNG
+# BazCrypte: Collatz Tabanlı Kriptografik RSA
 
 ![Language](https://img.shields.io/badge/language-Python-blue.svg) ![Algorithm](https://img.shields.io/badge/algorithm-Collatz%20Conjecture-orange) ![License](https://img.shields.io/badge/license-MIT-green)
 
