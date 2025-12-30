@@ -68,8 +68,8 @@ CLASS BazCrypte:
         DÖNDÜR bit_havuzu
 
 ## Algoritma çıktısı
-
-      BAZCRYPTE - RSA KEY GENERATOR SYSTEM      
+===
+      BAZCRYPTE - RSA KEY GENERATOR SYSTEM      ===
 
 
 *Lütfen RSA anahtar üretimi için başlangıç tohumlarını giriniz.
