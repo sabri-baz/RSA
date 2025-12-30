@@ -72,7 +72,7 @@ CLASS BazCrypte:
       BAZCRYPTE - RSA KEY GENERATOR SYSTEM      
 ==================================================
 
-Lütfen RSA anahtar üretimi için başlangıç tohumlarını giriniz.
+*Lütfen RSA anahtar üretimi için başlangıç tohumlarını giriniz.
 (Farklı tohumlar, farklı şifreleme anahtarları üretir.)
 
 >> 1. Çekirdek Sayısı (Örn: 1903): 200
@@ -109,7 +109,7 @@ Algoritma, bu yörünge sırasında oluşan kaotik sıçramaları "bit" (0 veya 
 Projeyi bilgisayarınıza klonlayın:
 
 
-git clone [https://github.com/KULLANICI_ADIN/BazCrypte.git](https://github.com/sabri-baz/RSA.git)
+git clone [https://github.com/sabri-baz/Rsa.git](https://github.com/sabri-baz/RSA.git)
 cd BazCrypte
 '''
 
