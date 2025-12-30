@@ -109,7 +109,7 @@ Algoritma, bu yörünge sırasında oluşan kaotik sıçramaları "bit" (0 veya 
 Projeyi bilgisayarınıza klonlayın:
 
 
-git clone [https://github.com/KULLANICI_ADIN/BazCrypte.git](https://github.com/KULLANICI_ADIN/BazCrypte.git)
+git clone [https://github.com/KULLANICI_ADIN/BazCrypte.git](https://github.com/sabri-baz/RSA.git)
 cd BazCrypte
 '''
 
